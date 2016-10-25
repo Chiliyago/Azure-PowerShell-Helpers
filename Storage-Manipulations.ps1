@@ -38,7 +38,7 @@ AzCopy /Source:https://armstore0.blob.core.windows.net/vhd-sp2016 /Dest:https://
 # Add Azure VM Image
 Add-AzureVMImage -ImageName 'TMTechSp16Image' -MediaLocation 'https://armstoresh2kl34.blob.core.windows.net/vhd/SP-SvrImage20169174136.vhd' -OS Windows -Description 'Windows Server 2012 R2 loaded with SharePoint 2016 and other convenience tools' 
 
-$blog = ''
+$blob = ''
 $sasToken =   '?sv=2015-04-05&ss=bf&srt=o&sp=r&se=2020-10-25T06:00:00Z&st=2016-10-24T06:00:00Z&spr=https&sig=D0jzznbnXQ0%2B%2B7lNAEHhyxR4rFmrPHdSC42JtL%2BQ798%3D'
 $sasBlobUrl = 'https://armstore0.blob.core.windows.net/?sv=2015-04-05&ss=bf&srt=o&sp=r&se=2020-10-25T06:00:00Z&st=2016-10-24T06:00:00Z&spr=https&sig=D0jzznbnXQ0%2B%2B7lNAEHhyxR4rFmrPHdSC42JtL%2BQ798%3D'
 $sasFileUrl = 'https://armstore0.file.core.windows.net/?sv=2015-04-05&ss=bf&srt=o&sp=r&se=2020-10-25T06:00:00Z&st=2016-10-24T06:00:00Z&spr=https&sig=D0jzznbnXQ0%2B%2B7lNAEHhyxR4rFmrPHdSC42JtL%2BQ798%3D'
