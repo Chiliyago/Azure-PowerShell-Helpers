@@ -22,6 +22,12 @@ $armstore1 = New-AzureRmStorageAccount -ResourceGroupName $RsrcGrp.ResourceGroup
     $vhdContainer = New-AzureStorageContainer -Name 'vhd' -Context $armstore1.Context -Verbose -Permission Blob
     get-command '*container*'
 
+# Get Keys
+    $armstor1Keys = $armstore1 | Get-AzureRmStorageAccountKey 
+    $armstor1Keys[0]
+    $armstor1Keys[1]
+
+
 AzCopy /Source:https://armstore0.blob.core.windows.net/vhd-sp2016 /Dest:https://armstores6d5f4g.blob.core.windows.net/vhd /SourceKey:c0KHlnwJaAFyRLX+A8vrPS8f1kvBf2AbsfIYhkF4PO1d7rJq4FQpMXHaBPqOH1BUxiyEi67du3b0o4jve7WNiQ== /DestKey:/xZz/3mN7A2KHeS8JDLyQGxKGxOwtTrFfvN3sOw7vw5MpVhPdxT7yenerogDG68vUiu8+km+sz0sd7C/0LhQHQ== /Pattern:SP-SvrImage20169174136.vhd
 
 
